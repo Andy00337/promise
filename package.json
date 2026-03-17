@@ -1,5 +1,13 @@
 {
   "name": "blessing-wall",
   "version": "1.0.0",
-  "description": "祝福墙匿名留言板"
+  "description": "祝福墙匿名留言板",
+  "main": "api/comments.js",
+  "scripts": {
+    "start": "node api/comments.js"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=16.0.0"
+  }
 }
