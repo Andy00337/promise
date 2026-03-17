@@ -1,6 +1,20 @@
 // 用内存存储留言（Vercel免费版够用，重启会清空）
 // 如果想永久保存，可以换成简单的JSON文件存储
 
+export default async function handler(req, res) {
+  // 设置CORS头，允许所有域名访问
+  res.setHeader('Access-Control-Allow-Origin', '*');  // ← 最关键的一行
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  // 处理预检请求（OPTIONS）
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
+  }
+
+  // 其他代码保持不变...
+}
 let comments = [
   // 初始化两条示例留言
   {
