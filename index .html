@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>✨ 祝福时光机 · 匿名留言版</title>
+    <!-- 直接在HTML头部定义API地址 -->
+    <script>
+        // ⚠️ 这是你的正确API地址，已经改好了！
+        const API_URL = 'https://xingfuxue.xyz/api/comments';
+    </script>
     <style>
+        /* 完整的样式代码（保持不变） */
         * {
             margin: 0;
             padding: 0;
@@ -23,7 +29,6 @@
             margin: 0 auto;
         }
 
-        /* 主卡片 */
         .main-card {
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(10px);
@@ -52,7 +57,6 @@
             padding-bottom: 12px;
         }
 
-        /* 祝福展示区 */
         .blessing-box {
             background: rgba(255, 255, 255, 0.7);
             border-radius: 25px;
@@ -74,7 +78,6 @@
             font-weight: 500;
         }
 
-        /* 按钮 */
         .button-wrapper {
             display: flex;
             justify-content: center;
@@ -101,7 +104,6 @@
             box-shadow: 0 2px 0 #5d4777;
         }
 
-        /* 统计信息 */
         .stats {
             display: flex;
             justify-content: center;
@@ -124,7 +126,6 @@
             margin-left: 5px;
         }
 
-        /* 评论区容器 */
         .comments-container {
             background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(10px);
@@ -143,7 +144,6 @@
             border-bottom: 3px solid #e9ddf5;
         }
 
-        /* 留言输入框 */
         .comment-input-area {
             margin-bottom: 25px;
         }
@@ -192,7 +192,6 @@
             cursor: not-allowed;
         }
 
-        /* 留言列表 */
         .comments-list {
             max-height: 500px;
             overflow-y: auto;
@@ -272,7 +271,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- 主卡片 -->
         <div class="main-card">
             <h1>✨祝福时光机</h1>
             <div class="subtitle">每天一句温暖话</div>
@@ -291,17 +289,14 @@
             </div>
         </div>
 
-        <!-- 评论区 -->
         <div class="comments-container">
             <div class="comments-title">💬 匿名祝福墙</div>
             
-            <!-- 输入框 -->
             <div class="comment-input-area">
                 <textarea id="commentContent" class="comment-textarea" placeholder="写下你的祝福... (完全匿名，无需任何信息)"></textarea>
                 <button id="sendBtn" class="send-btn" onclick="addComment()">💬 匿名发送祝福</button>
             </div>
             
-            <!-- 留言列表 -->
             <div id="commentsList" class="comments-list">
                 <div class="loading-msg">✨ 加载留言中...</div>
             </div>
@@ -313,7 +308,6 @@
         <div class="footer-space"></div>
     </div>
 
-    <!-- 祝福语库 -->
     <script>
         const greetings = [
             "愿你每一天都充满阳光和欢笑",
@@ -349,21 +343,11 @@
             document.getElementById('greetingDisplay').innerHTML = greetings[randomIndex];
         }
         
-        // 页面加载时显示一条随机祝福
         window.onload = function() {
             showRandomGreeting();
-            loadComments(); // 加载留言
+            loadComments();
         };
-    </script>
 
-    <!-- 评论功能脚本 -->
-    <script>
-        // API地址（改成你的Vercel域名）
-        const API_URL = 'https://xingfuxue.xyz/api/comments';  // 如果部署到Vercel，会自动代理
-        // 如果本地测试，用完整地址：
-        // const API_URL = 'https://你的项目名.vercel.app/api/comments';
-
-        // 加载所有留言
         async function loadComments() {
             try {
                 const response = await fetch(API_URL);
@@ -381,7 +365,6 @@
             }
         }
 
-        // 显示留言列表
         function displayComments(comments) {
             const listDiv = document.getElementById('commentsList');
             
@@ -395,10 +378,10 @@
                 html += `
                     <div class="comment-item">
                         <div class="comment-header">
-                            <span class="comment-nick">${comment.nick}</span>
+                            <span class="comment-nick">${escapeHtml(comment.nick)}</span>
                             <span class="comment-time">${comment.time}</span>
                         </div>
-                        <div class="comment-content">${comment.content}</div>
+                        <div class="comment-content">${escapeHtml(comment.content)}</div>
                     </div>
                 `;
             });
@@ -406,7 +389,12 @@
             listDiv.innerHTML = html;
         }
 
-        // 添加新留言
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
         async function addComment() {
             const contentInput = document.getElementById('commentContent');
             const content = contentInput.value.trim();
@@ -417,7 +405,6 @@
                 return;
             }
 
-            // 禁用按钮防止重复提交
             sendBtn.disabled = true;
             sendBtn.innerHTML = '发送中...';
 
@@ -433,9 +420,9 @@
                 const result = await response.json();
                 
                 if (result.success) {
-                    contentInput.value = ''; // 清空输入框
-                    await loadComments(); // 重新加载留言
-                    showToast('✨ 祝福已送达');
+                    contentInput.value = '';
+                    await loadComments();
+                    alert('✨ 祝福已送达');
                 } else {
                     alert(result.error || '发送失败，请重试');
                 }
@@ -443,18 +430,11 @@
                 console.error('发送留言出错:', error);
                 alert('网络错误，请稍后重试');
             } finally {
-                // 恢复按钮
                 sendBtn.disabled = false;
                 sendBtn.innerHTML = '💬 匿名发送祝福';
             }
         }
 
-        // 显示提示（简单版）
-        function showToast(msg) {
-            alert(msg); // 简单用alert，也可以改成漂亮的提示
-        }
-
-        // 显示错误
         function showError(msg) {
             document.getElementById('commentsList').innerHTML = `<div class="empty-msg">❌ ${msg}</div>`;
         }
