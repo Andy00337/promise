@@ -6,8 +6,11 @@
   "scripts": {
     "start": "node api/comments.js"
   },
-  "dependencies": {},
+   "dependencies": {
+    "pg": "^8.11.0"
+  }
   "engines": {
     "node": ">=16.0.0"
+    
   }
 }
