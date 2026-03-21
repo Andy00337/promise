@@ -76,8 +76,19 @@ export default async function handler(req, res) {
       const randomNick = nicknames[Math.floor(Math.random() * nicknames.length)];
       
       // 生成时间
-      const now = new Date();
-      const timeStr = `${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
+      function getBeijingTime() {
+  const now = new Date();
+  // 转换为北京时间（UTC+8）
+  const beijingTime = new Date(now.getTime() + (8 * 60 * 60 * 1000));
+  const year = beijingTime.getUTCFullYear();
+  const month = String(beijingTime.getUTCMonth() + 1).padStart(2, '0');
+  const day = String(beijingTime.getUTCDate()).padStart(2, '0');
+  const hour = String(beijingTime.getUTCHours()).padStart(2, '0');
+  const minute = String(beijingTime.getUTCMinutes()).padStart(2, '0');
+  return `${month}-${day} ${hour}:${minute}`;
+}
+
+const timeStr = getBeijingTime();
       
       const id = Date.now();
       
