@@ -272,8 +272,8 @@
 <body>
     <div class="container">
         <div class="main-card">
-            <h1>✨祝福时光机</h1>
-            <div class="subtitle">每天一句温暖话</div>
+            <h1>✨幸福时光机</h1>
+            <div class="subtitle">温暖无处不在</div>
             
             <div class="blessing-box">
                 <div id="greetingDisplay">🌈 点下方按钮<br>抽取今日祝福</div>
@@ -290,11 +290,11 @@
         </div>
 
         <div class="comments-container">
-            <div class="comments-title">💬 匿名祝福墙</div>
+            <div class="comments-title">💬 祝福墙</div>
             
             <div class="comment-input-area">
-                <textarea id="commentContent" class="comment-textarea" placeholder="写下你的祝福... (完全匿名，无需任何信息)"></textarea>
-                <button id="sendBtn" class="send-btn" onclick="addComment()">💬 匿名发送祝福</button>
+                <textarea id="commentContent" class="comment-textarea" placeholder="写下你的祝福... "></textarea>
+                <button id="sendBtn" class="send-btn" onclick="addComment()">💬 发送祝福</button>
             </div>
             
             <div id="commentsList" class="comments-list">
@@ -302,7 +302,7 @@
             </div>
             
             <div class="anonymous-tip">
-                ✨ 完全匿名 · 昵称随机生成 · 只留祝福不留名
+                ✨ 留下你的祝福,让暖意传递
             </div>
         </div>
         <div class="footer-space"></div>
@@ -311,7 +311,7 @@
     <script>
         const greetings = [
             "愿你每一天都充满阳光和欢笑",
-            "祝你身体健康，万事如意",
+            "把细碎的温暖折成小星光，递到你手里，愿它能照亮你此刻的小疲惫",
             "愿幸运和幸福时刻伴随你",
             "新的一天，新的希望，加油",
             "希望你有个超级棒的好心情",
@@ -324,14 +324,17 @@
             "做自己的太阳，无需凭借谁的光",
             "慢慢来，会好的",
             "今天会有好事发生",
-            "你是最棒的",
             "保持可爱，烦恼走开",
+            "把快乐装进口袋，把幸福揣进心怀，一路向阳，一路花开",
+            "春有百花秋有月，夏有凉风冬有雪;若无闲事挂心头，便是人间好时节",
+            "行到水穷处，坐看云起时",
             "温柔半两，从容一生",
             "万物皆有裂痕，那是光照进来的地方",
             "愿你遍历山河，觉得人间值得",
             "把每一天都过得热气腾腾",
-            "你特别好，特别温柔，特别值得",
-            "在这个冬天，和最好的自己碰面",
+            "把好运装满，把烦恼清空，愿你岁岁常欢愉，年年皆胜意",
+            "在这个春天，和最好的自己碰面",
+            "不用等盛大的时刻，一句 “我在”、一份小零食，都是在说：我想把幸福递给你",
             "愿你的快乐如繁星，数也数不清",
             "别着急，你想要的，岁月都会给你"
         ];
