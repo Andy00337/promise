@@ -168,7 +168,7 @@
                 <div class="prose prose-gray max-w-none text-secondary">
                     <p class="mb-4 leading-relaxed">
                         <strong class="text-primary">课堂上,</strong>当老师讲解的知识点使你困惑,在复制粘贴到其他软件的片刻功夫,回过神来已然是不知所云.<strong class="text-primary">课堂下,</strong>长达几十页的课件、上百页的课本，让我们无从下手.
-                        每每在深度学习中遇到一个不懂的知识，workflow 变成了：
+                        <strong class="text-primary">每每</strong>在深度学习中遇到一个不懂的知识，workflow 变成了：
                     </p>
                     <ol class="list-decimal list-inside space-y-2 mb-6 text-sm md:text-base pl-4">
                         <li>选中文字 → 复制 or 截图裁切</li>
@@ -301,6 +301,64 @@
                     <h3 class="font-medium text-sm">选中即问，深度解释</h3>
                     <p class="text-xs text-secondary mt-1">选中"矩阵的初等变换"，AI 自动诊断学习障碍并引导</p>
                 </div>
+            </div>
+        </section>
+
+        <!-- Browser Extension -->
+        <section class="reveal bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 md:p-12 border border-gray-100">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-2xl font-bold mb-4">MN Browser：打造 AI 知识库</h2>
+                    <p class="text-secondary leading-relaxed mb-6">
+                        <strong class="text-primary">场景一：</strong>完整文件上传，实现笔记学习并行。<br>
+                        <strong class="text-primary">场景二：</strong>视频摘要，B站大学学习时直接截图，告别来回切换的烦恼。
+                    </p>
+                    <div class="flex items-center gap-4 text-sm text-secondary">
+                        <span class="flex items-center gap-1">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            完整文件解析
+                        </span>
+                        <span class="flex items-center gap-1">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            视频帧提取
+                        </span>
+                        <span class="flex items-center gap-1">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            适配笔记格式
+                        </span>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
+                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-xs font-bold">1</div>
+                            <div class="text-sm">
+                                <span class="font-medium text-primary">打开 MN Browser 插件</span>
+                                <p class="text-xs text-secondary mt-0.5">登录 Kimi 或其他 AI</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-purple-50 rounded-lg">
+                            <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 text-xs font-bold">2</div>
+                            <div class="text-sm">
+                                <span class="font-medium text-primary">点击 "Upload to ***"</span>
+                                <p class="text-xs text-secondary mt-0.5">直接将完整文件上传至平台</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
+                            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-xs font-bold">3</div>
+                            <div class="text-sm">
+                                <span class="font-medium text-primary">一站式学习:知识解析</span>
+                                <p class="text-xs text-secondary mt-0.5">AI 自动分析并关联笔记内容</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!-- Gallery Section -->
+        <section id="gallery" class="reveal">
+            <h2 class="text-2xl font-bold mb-8">使用场景展示</h2>
+            <div class="grid md:grid-cols-3 gap-6">
 
                 <!-- Image 2 -->
                 <div class="group cursor-pointer" onclick="openLightbox(1)">
@@ -328,58 +386,6 @@
             </div>
         </section>
 
-        <!-- Browser Extension -->
-        <section class="reveal bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 md:p-12 border border-gray-100">
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                    <h2 class="text-2xl font-bold mb-4">MN Browser：打造 AI 知识库</h2>
-                    <p class="text-secondary leading-relaxed mb-6">
-                        场景一：完整文件上传，实现笔记学习并行。<br>
-                        场景二：视频摘要，B站大学学习时直接截图，告别来回切换的烦恼。
-                    </p>
-                    <div class="flex items-center gap-4 text-sm text-secondary">
-                        <span class="flex items-center gap-1">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            完整文件解析
-                        </span>
-                        <span class="flex items-center gap-1">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            视频帧提取
-                        </span>
-                        <span class="flex items-center gap-1">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            一站式学习
-                        </span>
-                    </div>
-                </div>
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
-                            <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-xs font-bold">1</div>
-                            <div class="text-sm">
-                                <span class="font-medium text-primary">打开 MN Browser 插件</span>
-                                <p class="text-xs text-secondary mt-0.5">登录 Kimi 或其他 AI</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-3 p-3 bg-purple-50 rounded-lg">
-                            <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 text-xs font-bold">2</div>
-                            <div class="text-sm">
-                                <span class="font-medium text-primary">点击 "Upload to ***"</span>
-                                <p class="text-xs text-secondary mt-0.5">直接将完整文件上传至平台</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-3 p-3 bg-green-50 rounded-lg">
-                            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-xs font-bold">3</div>
-                            <div class="text-sm">
-                                <span class="font-medium text-primary">开始一站式学习</span>
-                                <p class="text-xs text-secondary mt-0.5">AI 自动分析并关联笔记内容</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Conclusion -->
         <section class="reveal text-center max-w-3xl mx-auto py-12">
             <div class="inline-flex items-center justify-center w-16 h-16 bg-gray-100 rounded-full mb-6 text-2xl">
@@ -387,7 +393,7 @@
             </div>
             <h2 class="text-3xl font-bold mb-6">工具是杠杆，好奇心是支点</h2>
             <p class="text-lg text-secondary leading-relaxed mb-8 text-balance">
-                这套 workflow 的核心不是「用 AI 偷懒」，而是<strong class="text-primary">把 AI 当作一个不知疲倦的知识策展人（Curator）</strong>。它帮我完成了从「信息收集」到「知识网络」的关键一跃，让我能把认知资源集中在创造性思考而非机械整理上。
+                这套 workflow 的核心不是「用 AI 偷懒」，而是<strong class="text-primary">把 AI 当作一个不知疲倦的知识策展人</strong>。它帮我完成了从「信息收集」到「知识网络」的关键一跃，让我能把认知资源集中在创造性思考而非机械整理上。
             </p>
             <div class="bg-surface rounded-2xl p-6 border border-gray-100 inline-block text-left">
                 <p class="text-sm text-secondary italic mb-3">当课件不再是一座孤岛，当每一个概念都自动连接到更宏大的知识图景，学习就从「应付考试」变成了探索发现。</p>
