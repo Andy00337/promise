@@ -153,9 +153,9 @@
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
                         </div>
                         <h3 class="font-semibold mb-2">手写笔记的认知不可替代性</h3>
-                        <p class="text-sm text-secondary">空间记忆:手写圈画、箭头、疑问标记保留了你当时的注意力路径，回看时能瞬间复原「我当初为什么在这里困惑」
-                        激活运动皮层：手写涉及复杂的手眼协调，这些物理动作会双重编码（dual coding），建立更强的记忆痕迹
-                        非线性表达：突然想到关联概念？在旁边画个气泡连线</p>
+                        <p class="text-sm text-secondary">1.  空间记忆:手写圈画、箭头、疑问标记保留了你当时的注意力路径，回看时能瞬间复原「我当初为什么在这里困惑」
+                        2.  激活运动皮层：手写涉及复杂的手眼协调，这些物理动作会双重编码（dual coding），建立更强的记忆痕迹
+                        3.  非线性表达：突然想到关联概念？在旁边画个气泡连线</p>
                     </div>
                 </div>
             </div>
@@ -164,23 +164,24 @@
         <!-- The Problem -->
         <section class="reveal bg-surface rounded-3xl p-8 md:p-12 border border-gray-100">
             <div class="max-w-3xl">
-                <h2 class="text-2xl font-bold mb-6">从「信息焦虑」到「一体式学习」</h2>
+                <h2 class="text-2xl font-bold mb-6">现状:从「海量信息」到「一体式学习」</h2>
                 <div class="prose prose-gray max-w-none text-secondary">
                     <p class="mb-4 leading-relaxed">
-                        左手边是老师发放的长达几十页的课件、上百页的课本，右手边是浏览器里开着的 12 个 Tab（Kimi、维基百科、知乎、B站教程...）。每当遇到一个不懂的知识，workflow 变成了：
+                        <strong class="text-primary">课堂上,</strong>当老师讲解的知识点使你困惑,在复制粘贴到其他软件的片刻功夫,回过神来已然是不知所云.<strong class="text-primary">课堂下,</strong>长达几十页的课件、上百页的课本，让我们无从下手.
+                        每每在深度学习中遇到一个不懂的知识，workflow 变成了：
                     </p>
                     <ol class="list-decimal list-inside space-y-2 mb-6 text-sm md:text-base pl-4">
                         <li>选中文字 → 复制 or 截图裁切</li>
                         <li>切换到浏览器 → 粘贴到 AI 对话框</li>
                         <li>得到解释 → 手动整理到笔记软件</li>
-                        <li>回到 PDF → 已经忘了刚才读到哪里</li>
+                        <li>回到 PDF → 打断心流状态</li>
                     </ol>
                     <div class="highlight p-4 rounded-lg my-6 text-primary">
                         <p class="font-medium mb-1">核心痛点</p>
-                        <p class="text-sm">上下文切换（Context Switching）的摩擦成本，正在吞噬专注力。</p>
+                        <p class="text-sm">事物来回切换的摩擦成本，正在吞噬专注力。</p>
                     </div>
                     <p class="leading-relaxed">
-                        AI 时代最好的老师就是 AI。它不会厌烦你的重复提问，不会受限于 office hour。但问题是——<strong class="text-primary">如何让 AI 无缝嵌入知识建构流程，而非成为一个割裂的外部搜索引擎？</strong>
+                        AI 时代最好的老师的确是 AI。它不会厌烦你的重复提问，不会受限于 office hour。但问题是——<strong class="text-primary">如何让 AI 无缝嵌入知识建构流程，而非成为一个割裂的外部搜索引擎？</strong>
                     </p>
                 </div>
             </div>
@@ -189,7 +190,7 @@
         <!-- Core Architecture -->
         <section id="workflow" class="reveal">
             <div class="mb-12">
-                <h2 class="text-2xl md:text-3xl font-bold mb-4">双引擎驱动的知识建构 Workflow</h2>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4">MN chatai:知识建构 Workflow</h2>
                 <p class="text-secondary max-w-2xl">MN ChatAI 不是简单的「在笔记软件里嵌套一个聊天窗口」。它通过预定义变量实现了 AI 与笔记内容的深度耦合。</p>
             </div>
 
@@ -232,7 +233,7 @@
                         <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 text-blue-600">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
                         </div>
-                        <h3 class="text-xl font-bold mb-3">模式一：深度学习</h3>
+                        <h3 class="text-xl font-bold mb-3">prompt：深度学习</h3>
                         <p class="text-sm text-secondary mb-4 font-medium uppercase tracking-wider">知识考古师</p>
                         <ul class="space-y-3 text-sm text-secondary">
                             <li class="flex items-start gap-2">
@@ -261,7 +262,7 @@
                         <div class="w-12 h-12 bg-purple-100 rounded-2xl flex items-center justify-center mb-6 text-purple-600">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         </div>
-                        <h3 class="text-xl font-bold mb-3">模式二：名师辅导</h3>
+                        <h3 class="text-xl font-bold mb-3">prompt：名师辅导</h3>
                         <p class="text-sm text-secondary mb-4 font-medium uppercase tracking-wider">苏格拉底式私教</p>
                         <ul class="space-y-3 text-sm text-secondary">
                             <li class="flex items-start gap-2">
