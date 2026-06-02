@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/db';
 
-// POST：核销（立即返回祝福，定位可选）
 export async function POST(req: Request) {
   try {
     const body = await req.json();
@@ -13,7 +12,6 @@ export async function POST(req: Request) {
 
     const result = await prisma.$transaction(async (tx) => {
       const qr = await tx.qrCode.findUnique({ where: { token } });
-
       if (!qr) throw new Error('INVALID');
       if (qr.status === 'scanned') throw new Error('USED');
 
@@ -41,24 +39,16 @@ export async function POST(req: Request) {
   }
 }
 
-// PATCH：静默补传坐标（已核销的码更新定位）
 export async function PATCH(req: Request) {
   try {
     const { token, latitude, longitude } = await req.json();
-
     if (!token || latitude == null || longitude == null) {
       return NextResponse.json({ error: 'MISSING_FIELDS' }, { status: 400 });
     }
-
-    const updated = await prisma.qrCode.updateMany({
-      where: { token, status: 'scanned' },
+    await prisma.qrCode.updateMany({
+      where: { token },
       data: { latitude, longitude },
     });
-
-    if (updated.count === 0) {
-      return NextResponse.json({ error: 'NOT_FOUND_OR_UNUSED' }, { status: 404 });
-    }
-
     return NextResponse.json({ success: true });
   } catch {
     return NextResponse.json({ error: 'FAILED' }, { status: 500 });
