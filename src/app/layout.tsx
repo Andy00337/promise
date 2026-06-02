@@ -10,7 +10,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="zh-CN">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-        <script src="https://map.qq.com/api/gljs?v=1.exp&key=YOUR_TMAP_KEY" defer></script>
+        <script src="https://map.qq.com/api/gljs?v=1.exp&key=2ASBZ-H23WI-QIRGS-UYIAQ-GGWOJ-RVF23" defer></script>
       </head>
       <body className="antialiased text-gray-900 bg-white">{children}</body>
     </html>
