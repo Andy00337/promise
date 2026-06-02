@@ -216,7 +216,7 @@ export default function ScanPage() {
         </div>
 
         {/* 定位提醒 */}
-<div className="mt-2 text-center text-[15px] text-red-500">
+<div className="mt-2 text-center text-[15px] text-red-600">
   ⚠️ 请确保已开启手机定位，以便记录扫码位置
 </div>
       </div>
