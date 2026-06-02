@@ -199,30 +199,9 @@ export default function ScanPage() {
       {/* 抽奖区 */}
       <div className="animate-fade-in mt-6 w-full max-w-xs space-y-3" style={{ animationDelay: '0.1s' }}>
         <div className="rounded-2xl bg-white p-5 shadow-md shadow-gray-100/30 ring-1 ring-gray-100/60">
-          <p className="mb-4 text-center text-xs text-gray-500">扫码成功！复制链接参与抽奖</p>
+          <p className="mb-4 text-center text-xs text-gray-500">扫码成功！点击下方按钮参与抽奖</p>
 
-          <button
-            onClick={handleCopy}
-            className="group relative w-full overflow-hidden rounded-xl bg-gradient-to-r from-rose-400 to-orange-400 py-3 text-sm font-medium text-white shadow-sm shadow-rose-200/30 active:scale-[0.98] transition"
-          >
-            <span className="flex items-center justify-center gap-2">
-              {copied ? (
-                <>
-                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                  已复制，去微信粘贴
-                </>
-              ) : (
-                <>
-                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                  </svg>
-                  复制抽奖链接
-                </>
-              )}
-            </span>
-          </button>
+ 
 
           <a
             href={data.wxLink}
@@ -232,7 +211,7 @@ export default function ScanPage() {
               <path d="M8.5 13.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm7 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
               <path fillRule="evenodd" d="M12 2C6.48 2 2 6.03 2 11c0 2.76 1.36 5.23 3.5 6.87V22l4.09-2.24c.78.15 1.58.24 2.41.24 5.52 0 10-4.03 10-9s-4.48-9-10-9zm0 16c-.71 0-1.4-.07-2.07-.2l-.37-.08-2.56 1.4v-2.14l-.55-.38C4.95 15.92 4 13.57 4 11c0-3.87 3.58-7 8-7s8 3.13 8 7-3.58 7-8 7z" clipRule="evenodd" />
             </svg>
-            在微信内打开
+            收获你的幸运
           </a>
         </div>
 
@@ -241,6 +220,10 @@ export default function ScanPage() {
           <br />
           粘贴到微信聊天窗口后点击进入
         </div>
+        {/* 定位提醒 */}
+<div className="mt-2 text-center text-[10px] text-orange-400">
+  ⚠️ 请确保已开启手机定位，以便记录扫码位置
+</div>
       </div>
 
       <p className="mt-8 text-[10px] tracking-widest text-gray-300">ONE QR · ONE BLESSING</p>
