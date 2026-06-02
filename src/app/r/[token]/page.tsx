@@ -215,13 +215,8 @@ export default function ScanPage() {
           </a>
         </div>
 
-        <div className="rounded-xl bg-white/60 p-3 text-center text-[11px] leading-relaxed text-gray-400 ring-1 ring-white/40">
-          若直接打开无反应，请点击上方按钮复制链接，
-          <br />
-          粘贴到微信聊天窗口后点击进入
-        </div>
         {/* 定位提醒 */}
-<div className="mt-2 text-center text-[10px] text-orange-400">
+<div className="mt-2 text-center text-[15px] text-red-500">
   ⚠️ 请确保已开启手机定位，以便记录扫码位置
 </div>
       </div>
