@@ -92,7 +92,7 @@ export default function AdminPage() {
     };
     recorder.start();
     alert('开始录制，请确保动画正在播放。10秒后自动停止。');
-    setTimeout(() => recorder.stop(), 10000);
+    setTimeout(() => recorder.stop(), 30000);
   };
 
   if (loading) return <div className="p-10 text-sm text-gray-500">加载数据中...</div>;
